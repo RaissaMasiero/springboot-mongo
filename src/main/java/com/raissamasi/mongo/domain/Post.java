@@ -1,5 +1,6 @@
 package com.raissamasi.mongo.domain;
 
+import com.raissamasi.mongo.dto.AuthorDTO;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,11 +16,11 @@ public class Post implements Serializable {
     private Date data;
     private String titulo;
     private String corpo;
-    private User autor;
+    private AuthorDTO autor;
 
     public Post(){}
 
-    public Post(String id, Date data, String titulo, String corpo, User autor) {
+    public Post(String id, Date data, String titulo, String corpo, AuthorDTO autor) {
         this.id = id;
         this.data = data;
         this.titulo = titulo;
@@ -59,11 +60,11 @@ public class Post implements Serializable {
         this.corpo = corpo;
     }
 
-    public User getAutor() {
+    public AuthorDTO getAutor() {
         return autor;
     }
 
-    public void setAutor(User autor) {
+    public void setAutor(AuthorDTO autor) {
         this.autor = autor;
     }
 
